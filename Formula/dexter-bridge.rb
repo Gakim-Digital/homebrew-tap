@@ -2,13 +2,13 @@ class DexterBridge < Formula
   desc "Local Claude Code connector for the Dexter Framer plugin"
   homepage "https://instawebai.com/dexter-bridge"
   url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.5.1.tgz"
-  sha256 "bacec58c4ab8ba055190168f41b819054e4f36389fbef153dca0dcf5302a0ce7"
+  sha256 "e1c0b67a7b92a2d39af583c48d04f820fdd04bbb1db530fe4d195c43b26f0a3d"
   license :cannot_represent
 
   depends_on "node@22"
 
   def install
-    ENV.prepend_path "PATH", Formula["node@22"].opt_bin
+    ENV.prepend_path "PATH", formula_opt_bin("node@22")
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir[libexec/"bin/*"]
   end
@@ -19,7 +19,7 @@ class DexterBridge < Formula
     process_type :background
     log_path var/"log/dexter-bridge.log"
     error_log_path var/"log/dexter-bridge.error.log"
-    environment_variables PATH: "#{Formula["node@22"].opt_bin}:#{std_service_path_env}",
+    environment_variables PATH:                         "#{formula_opt_bin("node@22")}:#{std_service_path_env}",
                           DEXTER_BRIDGE_INSTALL_METHOD: "homebrew"
   end
 
