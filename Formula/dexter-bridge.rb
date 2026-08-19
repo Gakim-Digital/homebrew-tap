@@ -1,8 +1,8 @@
 class DexterBridge < Formula
   desc "Local Claude Code connector for the Dexter Framer plugin"
   homepage "https://instawebai.com/dexter-bridge"
-  url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.5.13.tgz"
-  sha256 "dd023a3f73754c2b8b395119aaf3be798dad85230b5afd80ca92160f35abc15d"
+  url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.5.14.tgz"
+  sha256 "aa7844dec98cd989ea37a2102015dc9ca266cd9e39208966da5d7848fc97579d"
   license :cannot_represent
 
   depends_on "node@22"
