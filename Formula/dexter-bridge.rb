@@ -1,8 +1,8 @@
 class DexterBridge < Formula
-  desc "Local Claude Code connector for the Dexter Framer plugin"
+  desc "Local Codex and Claude Code bridge for InstaWebAI and Dexter"
   homepage "https://instawebai.com/dexter-bridge"
-  url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.5.20.tgz"
-  sha256 "50e2067b5dc2ec7a978f21aa6650df90fe6aaefc5012c33baa6e75e84763934d"
+  url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.5.21.tgz"
+  sha256 "4563d29ac7e45838b2320f77ec53254a1b74e8fd883dd46548e5f28ec3109eef"
   license :cannot_represent
 
   depends_on "node@22"
@@ -24,6 +24,6 @@ class DexterBridge < Formula
   end
 
   test do
-    assert_match "Dexter Bridge", shell_output("#{bin}/dexter-bridge --help")
+    assert_match "Local Agent Bridge for Dexter and InstaWebAI", shell_output("#{bin}/dexter-bridge --help")
   end
 end
