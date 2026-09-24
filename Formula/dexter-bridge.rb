@@ -1,8 +1,8 @@
 class DexterBridge < Formula
   desc "Local Codex and Claude Code bridge for InstaWebAI and Dexter"
   homepage "https://instawebai.com/dexter-bridge"
-  url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.11.6.tgz"
-  sha256 "223d8dc55d90f56f0a2e5dd69a0c0a6f724a0665702959b44285c792712c3994"
+  url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.11.8.tgz"
+  sha256 "e07cfeb2a1d806c5db2eae52db20775fa497a183003975ddd31d4a5f59c79ae5"
   license :cannot_represent
 
   depends_on "node@22"
@@ -15,7 +15,7 @@ class DexterBridge < Formula
 
   service do
     run [opt_bin/"dexter-bridge", "start", "--agent", "claude-code"]
-    keep_alive true
+    keep_alive successful_exit: false
     process_type :background
     log_path var/"log/dexter-bridge.log"
     error_log_path var/"log/dexter-bridge.error.log"
