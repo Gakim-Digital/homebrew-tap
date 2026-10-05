@@ -1,8 +1,8 @@
 class DexterBridge < Formula
   desc "Local Codex and Claude Code bridge for InstaWebAI and Dexter"
   homepage "https://instawebai.com/dexter-bridge"
-  url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.11.11.tgz"
-  sha256 "a2bd23ca9f8372abb04c2f29b01ed32bfaa36803cdb91af2b30c92c2cb00119b"
+  url "https://registry.npmjs.org/@gakim-digital/dexter-bridge/-/dexter-bridge-0.11.12.tgz"
+  sha256 "697597f988ed2f7d988340350bf6e0e0a0de1d0f64a13804306af08591d9b528"
   license :cannot_represent
 
   depends_on "node@22"
